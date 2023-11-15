@@ -1,3 +1,20 @@
+CREATE TABLE Tracks (
+    track_id SERIAL PRIMARY KEY,
+    track_name VARCHAR(255),
+    duration TIME
+);
+
+CREATE TABLE Collections (
+    collection_id SERIAL PRIMARY KEY,
+    collection_name VARCHAR(255),
+    release_year DATE
+);
+
+CREATE TABLE Artists (
+    artist_id SERIAL PRIMARY KEY,
+    artist_name VARCHAR(255)
+);
+
 SELECT track_name, duration
 FROM Tracks
 ORDER BY duration DESC
